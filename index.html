@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Home Cleaning</title>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .marquee {
+            background-color: #3e8e41;
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 2px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function escolherServico(servico) {
+            const mensagem = `Olá, estou interessado no serviço: ${servico}`;
+            const url = `https://wa.me/258846967603?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Perfect Home Cleaning Logo">
+        <h1>Perfect Home Cleaning</h1>
+        <p>Serviços de limpeza, lavanderia e Ready to Go Service</p>
+        <div class="marquee">
+            <span>🧹 Transforme sua casa com nossos serviços profissionais de limpeza! 🧺 Lavanderia rápida e eficiente para facilitar sua vida! 🚚 Ready to Go: Encomendas prontas para viajar no mesmo dia! 🌟</span>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Serviços Disponíveis</h2>
+            <div class="services">
+                <div class="service-box">
+                    <h3>Serviços de Limpeza</h3>
+                    <ul>
+                        <li>Interior de escritórios e instituições</li>
+                        <li>Limpeza de domicílios</li>
+                        <li>Cozinha, casa de banho, sanitas e pias</li>
+                        <li>Cortinas</li>
+                        <li>Espaços em obra e após a obra</li>
+                    </ul>
+                    <button onclick="escolherServico('Serviços de Limpeza')">Escolher este Serviço</button>
+                </div>
+                <div class="service-box">
+                    <h3>Serviços de Lavanderia</h3>
+                    <ul>
+                        <li>Roupas, camisas, vestidos, fatos</li>
+                        <li>Lavagem a seco e a molhado</li>
+                        <li>Passagem a ferro</li>
+                        <li>Limpeza de cadeiras e sofás</li>
+                        <li>Serviços de entrega</li>
+                    </ul>
+                    <button onclick="escolherServico('Serviços de Lavanderia')">Escolher este Serviço</button>
+                </div>
+                <div class="service-box">
+                    <h3>Ready to Go Suite Case Service</h3>
+                    <ul>
+                        <li>Lavagem e arrumação de encomendas prontas para viajar</li>
+                        <li>Entrega no mesmo dia</li>
+                    </ul>
+                    <button onclick="escolherServico('Ready to Go Suite Case Service')">Escolher este Serviço</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <p>Email: <a href="mailto:Perfecthomecleaning@gmail.com">Perfecthomecleaning@gmail.com</a></p>
+            <p>Telefone: <a href="tel:+258846967603">+258 846967603</a>, <a href="tel:+258864719597">+258 864719597</a></p>
+        </section>
+        <section>
+            <h2>Equipe</h2>
+            <p><strong>Coordenador:</strong> Amílcar S. Chirute</p>
+            <p><strong>Supervisora:</strong> Fátima Langa</p>
+        </section>
+        <section>
+            <h2>Agende Nosso Serviço</h2>
+            <button onclick="alert('Obrigado por escolher a Perfect Home Cleaning! Entraremos em contato em breve.')">Agendar Agora</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Perfect Home Cleaning. Desenvolvido por <a href="https://meru2900.github.io/Upsite-Digital/" style="color: rgb(17, 5, 122); text-decoration: none;" target="_blank" >UpSite Digital</a>.</p>
+    </footer>
+</body>
+</html>
